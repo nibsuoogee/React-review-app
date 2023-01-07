@@ -1,7 +1,7 @@
 import React from 'react'
 import './ReviewPopup.css'
 
-function ReviewPopUp(props) {
+function ReviewPopup(props) {
     return (props.trigger) ? (
         <div className="reviewpopup">
             <div className="reviewpopup-inner">
@@ -12,4 +12,4 @@ function ReviewPopUp(props) {
     ) : "";
 }
 
-export default ReviewPopUp
+export default ReviewPopup
