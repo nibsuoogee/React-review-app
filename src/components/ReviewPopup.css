@@ -1,0 +1,28 @@
+.reviewpopup {
+    position: fixed;
+    top: 30;
+    left: 30;
+    width: 80%;
+    height: 60vh;
+    background-color: rgba(51, 51, 51, 0.904);
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewpopup-inner {
+    position: relative;
+    padding: 32px;
+    width: 70%;
+    max-width: 500px;
+    background-color: rgb(44, 44, 44);;
+    opacity: 1;
+}
+
+.reviewpopup-inner .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
