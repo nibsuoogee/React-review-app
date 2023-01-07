@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import ReviewPopUp from './components/ReviewPopup';
+import ReviewPopup from './components/ReviewPopup';
 import { useState } from 'react';
 
 function App() {
@@ -22,9 +22,9 @@ function App() {
           Learn React
         </a>
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
-        <ReviewPopUp trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <h3>Review Popup</h3>
-        </ReviewPopUp>
+        </ReviewPopup>
       </header>
     </div>
   );
