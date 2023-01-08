@@ -1,3 +1,4 @@
+//Track const from karuselli.html
 const track = document.getElementById("image-track")
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
@@ -21,6 +22,7 @@ window.onmousemove = e => {
     //The amount that the menu should be moved, based on the mouse movement
     const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+
     Math.min(nextPercentage, 0);
     Math.max(nextPercentage, -100);
 
