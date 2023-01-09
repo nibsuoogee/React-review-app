@@ -1,0 +1,6 @@
+karuselli-menu
+pop-up ikkuna
+Kirja/media komponentti
+kirjojen lisäys
+haku
+dark/light mode

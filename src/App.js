@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
+import Menu from './components/Menu/Menu.js';
 import { useState } from 'react';
 
 function App() {
@@ -18,30 +18,20 @@ function App() {
       stars: 4
     }
   ]);
+  
 
   return (
+    <body>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-
+        <Menu mediaItems={mediaItems}/>
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
         <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
           <h3>Review Popup</h3>
         </ReviewPopup>
       </header>
-    </div>
+      </div>
+    </body>
   );
 }
 
