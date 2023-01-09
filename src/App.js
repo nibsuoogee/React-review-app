@@ -1,6 +1,6 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
-import Menu from './components/Menu/menu.js';
+import Menu from './components/Menu/Menu.js';
 import { useState } from 'react';
 
 function App() {
@@ -19,12 +19,13 @@ function App() {
     }
   ]);
 
+  
+
   return (
     <body>
-    <Menu />
     <div className="App">
       <header className="App-header">
-
+        <Menu />
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
         <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
           <h3>Review Popup</h3>

@@ -23,9 +23,6 @@ function MenuTrack() {
       const percentage = (mouseDelta / maxDelta) * -100;
       const nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
-      Math.min(nextPercentage, 0);
-      Math.max(nextPercentage, -100);
-
       track.dataset.percentage = nextPercentage;
 
       track.animate({
