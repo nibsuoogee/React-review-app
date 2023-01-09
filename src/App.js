@@ -1,6 +1,6 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
-import Menu from './components/Menu/Menu.js';
+import Menu from './components/Menu/menu.js';
 import { useState } from 'react';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       id: 1,
       title: "1984",
       author: "George Orwell",
+      genres: ["Dystopian","Sci-fi"],
       review: "One of the books of all time, highly recommend to anyone interested in society and surveillance.",
       image: "https://kbimages1-a.akamaihd.net/a5312ed2-bc80-4f4c-972b-c24dc5990bd5/166/300/False/george-orwell-1984-4.jpg",
       stars: 4
