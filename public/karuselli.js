@@ -4,7 +4,6 @@ window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
 }
 
-
 window.onmouseup = () => {
     track.dataset.mouseDownAt = "0"
     track.dataset.prevPercentage = track.dataset.percentage;
@@ -22,9 +21,6 @@ window.onmousemove = e => {
     //The amount that the menu should be moved, based on the mouse movement
     const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
-
-    Math.min(nextPercentage, 0);
-    Math.max(nextPercentage, -100);
 
     track.dataset.percentage = nextPercentage;
 

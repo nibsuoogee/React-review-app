@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
+import MenuItems from "./MenuItems"
 
-function MenuTrack() {
+function MenuTrack(props) {
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -8,6 +9,7 @@ function MenuTrack() {
 
     const handleMouseDown = (e) => {
       track.dataset.mouseDownAt = e.clientX;
+      
     };
 
     const handleMouseUp = () => {
@@ -46,6 +48,13 @@ function MenuTrack() {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+
+  return (
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <img class="image" src={props.mediaItems.map((media) => (media.image))} draggable="false" />
+    </div>
+  );
+
 
 }
 

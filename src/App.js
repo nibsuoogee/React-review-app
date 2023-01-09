@@ -18,14 +18,13 @@ function App() {
       stars: 4
     }
   ]);
-
   
 
   return (
     <body>
     <div className="App">
       <header className="App-header">
-        <Menu />
+        <Menu mediaItems={mediaItems}/>
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
         <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
           <h3>Review Popup</h3>
