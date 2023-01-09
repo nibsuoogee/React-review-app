@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-function ImageTrack() {
+function MenuTrack() {
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -50,11 +50,6 @@ function ImageTrack() {
     };
   }, []);
 
-  return (
-    <div id="image-track" ref={trackRef}>
-      {/* Images go here */}
-    </div>
-  );
 }
 
-export default ImageTrack
+export default MenuTrack
