@@ -2,6 +2,8 @@ import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
 import Menu from './components/Menu/menu.js';
 import { useState } from 'react';
+import Modal from './components/AddBook/Modal';
+
 
 function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -19,17 +21,23 @@ function App() {
       stars: 4
     }
   ]);
-  
+
+  const [openModal, setOpenModal] = useState(false)
+
 
   return (
     <body>
     <div className="App">
       <header className="App-header">
         <Menu mediaItems={mediaItems}/>
+        {/*Button to open the review popup*/}
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
-        <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
-          <h3>Review Popup</h3>
-        </ReviewPopup>
+          <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
+            <h3>Review Popup</h3>
+          </ReviewPopup>
+
+        <button onClick={() => setOpenModal(true)}>Add a book</button>
+        <Modal open={openModal} onClose={() => setOpenModal(false)}/>
       </header>
       </div>
     </body>
