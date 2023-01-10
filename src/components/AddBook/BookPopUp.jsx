@@ -11,13 +11,13 @@ const AddBook = ({open, onClose}) => {
                 <button className="close-btn" onClick={onClose}><i class="fa fa-close"></i></button>
                 <div className='review-box'>
                     <form>
-                        <label for="name">Name </label>
+                        <label for="name">NAME </label>
                         <input type="text" id="name" name="name" placeholder="Name of the book"/>
 
-                        <label for="author">Author </label>
-                        <input type="text" id="author" name="author" placeholder="Author..."/>
+                        <label for="author">AUTHOR </label>
+                        <input type="text" id="author" name="author" placeholder="Author"/>
 
-                        <label for="genre">Genre</label>
+                        <label for="genre">GENRE</label>
                         <select id="genre" name="genre">
                             <option value="scifi">Sci-fi</option>
                             <option value="drama">Drama</option>
@@ -30,6 +30,10 @@ const AddBook = ({open, onClose}) => {
                             <option value="biography">Biography</option>
                             <option value="cooking">Cooking</option>
                         </select>
+                        <label>REVIEW</label>
+                        <div id="reviewtext-div">
+                            <textarea rows="10" cols="45" placeholder='Type a short review for the book'/>
+                        </div>
                         <input type="submit" value="Save"/>
                     </form>
                 </div>
