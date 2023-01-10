@@ -3,7 +3,7 @@ import ReviewPopup from './components/ReviewPopup/ReviewPopup';
 import Menu from './components/Menu/menu.js';
 import { useState } from 'react';
 import Modal from './components/AddBook/Modal';
-
+import AddBook from './components/AddBook/BookPopUp';
 
 function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -23,6 +23,7 @@ function App() {
   ]);
 
   const [openModal, setOpenModal] = useState(false)
+  const [openBookPopup, setOpenBookPopup] = useState(false)
 
 
   return (
@@ -35,9 +36,9 @@ function App() {
           <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems} setMedia={setMediaItems}>
             <h3>Review Popup</h3>
           </ReviewPopup>
-
-        <button onClick={() => setOpenModal(true)}>Add a book</button>
-        <Modal open={openModal} onClose={() => setOpenModal(false)}/>
+          
+        <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
+        <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} />
       </header>
       </div>
     </body>
