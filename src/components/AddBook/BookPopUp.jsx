@@ -8,7 +8,7 @@ const AddBook = ({open, onClose}) => {
     if(!open) return null;
 
     return(
-        <div className='reviewpopup'>
+        <div className='addbookpopup'>
             <div className='reviewpopup-inner'>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <button className="close-btn" onClick={onClose}><i class="fa fa-close"></i></button>
@@ -35,9 +35,11 @@ const AddBook = ({open, onClose}) => {
                         </select>
                         <label>REVIEW</label>
                         <div id="reviewtext-div">
-                            <textarea rows="10" cols="45" placeholder='Type a short review for the book'/>
+                            <div id="reviewtext-holder">
+                                <textarea rows="10" cols="45" placeholder='Type a short review for the book'/>
+                            </div>
                         </div>
-                        <input type="submit" value="Save"/>
+                        <input type="submit" value="Save" id="save-btn"/>
                     </form>
                 </div>
             </div>
