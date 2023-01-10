@@ -16,7 +16,7 @@
     padding: 32px;
     width: 70%;
     max-width: 500px;
-    background-color: rgb(29, 29, 29);;
+    background-color: rgb(29, 29, 29);
     opacity: 1;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .image_and_stars {
-    vertical-align: text-top;;
+    vertical-align: text-top;
 }
 
 .review_table {
@@ -54,7 +54,7 @@
   
   /* Darker background on mouse-over */
 .close-btn:hover {
-color: rgba(91, 91, 91, 0.904);;
+color: #5b5b5be7;
 }
 
 .data_box {
@@ -65,4 +65,10 @@ color: rgba(91, 91, 91, 0.904);;
 .review_box {
     background-color: beige;
     padding: 8px;
+}
+
+.star-rating {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; 
 }

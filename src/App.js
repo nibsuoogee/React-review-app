@@ -32,7 +32,7 @@ function App() {
         <Menu mediaItems={mediaItems}/>
         {/*Button to open the review popup*/}
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
-          <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems}>
+          <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems} setMedia={setMediaItems}>
             <h3>Review Popup</h3>
           </ReviewPopup>
 

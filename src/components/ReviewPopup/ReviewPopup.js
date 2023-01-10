@@ -1,8 +1,10 @@
 import React from 'react'
 import './ReviewPopup.css'
+import Rate from '../StarRating/StarRating'
 
 
 function ReviewPopup(props) {
+
     return (props.trigger) ? (
         <div className="reviewpopup">
             <div className="reviewpopup-inner">
@@ -14,6 +16,10 @@ function ReviewPopup(props) {
                             <tr>
                                 <td class="image_and_stars">
                                     <img src={media.image} alt="Media cover image"/>
+                                    <div className="star-rating">
+                                        <Rate rating={media.stars} onRating={(rate) => props.setMedia(rate)}/>
+                                    </div>
+                                    
                                 </td>
                                 <td>
                                     <table class="review_table">
