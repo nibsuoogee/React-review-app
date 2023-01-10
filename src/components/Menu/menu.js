@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react';
-import MenuItems from "./MenuItems"
 
 function MenuTrack(props) {
   const trackRef = useRef(null);
@@ -51,7 +50,7 @@ function MenuTrack(props) {
 
   return (
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      <img class="image" src={props.mediaItems.map((media) => (media.image))} draggable="false" />
+      {/*<img class="image" src={props.mediaItems.map((media) => (media.image))} draggable="false" />*/}
     </div>
   );
 

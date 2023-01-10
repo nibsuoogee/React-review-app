@@ -4,8 +4,8 @@ import './Modal.css'
 const Modal = ({open, onClose}) => {
     if (!open) return null;
   return (
-    <div classname="container">
-        <div>
+    <div classname="addbookpopup">
+        <div className='addbookpopup-inner'>
             <form>
                 <p onClick={onClose} className='closeBtn'>X</p>
                 <label for="name">Name </label>
