@@ -18,7 +18,14 @@ const Modal = ({open, onClose}) => {
                 <select id="genre" name="genre">
                     <option value="scifi">Sci-fi</option>
                     <option value="drama">Drama</option>
-                    <option value="science">Science</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="dystopian">Dystopian</option>
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="history">History</option>
+                    <option value="biography">Biography</option>
+                    <option value="cooking">Cooking</option>
                 </select>
                 <input type="submit" value="Save"/>
             </form>
