@@ -1,7 +1,10 @@
 import React from 'react'
 import './BookPopUp.css'
+import {useState} from "react"
 
 const AddBook = ({open, onClose}) => {
+    const [name, setName] = useState("")
+    const [author, setAuthor] = useState("")
     if(!open) return null;
 
     return(
@@ -12,10 +15,10 @@ const AddBook = ({open, onClose}) => {
                 <div className='review-box'>
                     <form>
                         <label for="name">NAME </label>
-                        <input type="text" id="name" name="name" placeholder="Name of the book"/>
+                        <input type="text" id="name" name="name" placeholder="Name of the book" value={name} onChange={(e) => setName(e.target.value)}/>
 
                         <label for="author">AUTHOR </label>
-                        <input type="text" id="author" name="author" placeholder="Author"/>
+                        <input type="text" id="author" name="author" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)}/>
 
                         <label for="genre">GENRE</label>
                         <select id="genre" name="genre">
