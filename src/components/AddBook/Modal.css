@@ -26,6 +26,7 @@ label{
     font-size: 20px;
     color: #F5D10D;
     font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /* Style inputs */
@@ -39,6 +40,7 @@ input[type=text], select {
     box-sizing: border-box;
     display: flex;
     text-align: center;
+    
   }
   
   /* Style the submit button */
@@ -53,6 +55,7 @@ input[type=text], select {
     cursor: pointer;
     font-weight: bold;
     font-size: 22px;
+    
   }
   
   /* Add a background color to the submit button on mouse-over */
