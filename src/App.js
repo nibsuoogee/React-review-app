@@ -35,7 +35,7 @@ function App() {
             <h3>Review Popup</h3>
           </ReviewPopup>
 
-        <button onClick={() => setOpenModal(true)}>Modal</button>
+        <button onClick={() => setOpenModal(true)}>Add a book</button>
         <Modal open={openModal} onClose={() => setOpenModal(false)}/>
       </header>
       </div>
