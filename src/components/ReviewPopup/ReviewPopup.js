@@ -17,7 +17,8 @@ function ReviewPopup(props) {
                                 <td class="image_and_stars">
                                     <img src={media.image} alt="Media cover image"/>
                                     <div className="star-rating">
-                                        <Rate rating={media.stars} onRating={(rate) => props.setMedia(rate)}/>
+                                        <Rate rating={media.stars} 
+                                        onRating={(rate) => props.setMedia({...props.mediaItems, stars: rate})}/>
                                     </div>
                                     
                                 </td>
