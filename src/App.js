@@ -2,7 +2,6 @@ import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
 import Menu from './components/Menu/menu.js';
 import { useState } from 'react';
-import Modal from './components/AddBook/Modal';
 import AddBook from './components/AddBook/BookPopUp';
 
 function App() {
@@ -19,10 +18,18 @@ function App() {
       review: "One of the books of all time, highly recommend to anyone interested in society and surveillance.",
       image: "https://kbimages1-a.akamaihd.net/a5312ed2-bc80-4f4c-972b-c24dc5990bd5/166/300/False/george-orwell-1984-4.jpg",
       stars: 4
+    },
+    {
+      id: 2,
+      title: "Metro 2033",
+      author: "	Dmitri Gluhovski",
+      genres: ["Dystopian","Sci-fi"],
+      review: "If you like the games, you will love the books",
+      image: "https://upload.wikimedia.org/wikipedia/fi/thumb/8/8b/Metro_2033.jpg/200px-Metro_2033.jpg",
+      stars: 5
     }
   ]);
 
-  const [openModal, setOpenModal] = useState(false)
   const [openBookPopup, setOpenBookPopup] = useState(false)
 
 
@@ -30,7 +37,7 @@ function App() {
     <body>
     <div className="App">
       <header className="App-header">
-        <Menu mediaItems={mediaItems}/>
+        {/*<Menu mediaItems={mediaItems}/>*/}
         {/*Button to open the review popup*/}
         <button onClick={() => setButtonPopup(true)}>Open Review Popup</button>
           <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup} mediaItems={mediaItems} setMedia={setMediaItems}>

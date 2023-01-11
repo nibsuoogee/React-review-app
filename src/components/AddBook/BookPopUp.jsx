@@ -1,21 +1,24 @@
 import React from 'react'
 import './BookPopUp.css'
+import {useState} from "react"
 
 const AddBook = ({open, onClose}) => {
+    const [name, setName] = useState("")
+    const [author, setAuthor] = useState("")
     if(!open) return null;
 
     return(
-        <div className='reviewpopup'>
+        <div className='addbookpopup'>
             <div className='reviewpopup-inner'>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <button className="close-btn" onClick={onClose}><i class="fa fa-close"></i></button>
                 <div className='review-box'>
                     <form>
                         <label for="name">NAME </label>
-                        <input type="text" id="name" name="name" placeholder="Name of the book"/>
+                        <input type="text" id="name" name="name" placeholder="Name of the book" value={name} onChange={(e) => setName(e.target.value)}/>
 
                         <label for="author">AUTHOR </label>
-                        <input type="text" id="author" name="author" placeholder="Author"/>
+                        <input type="text" id="author" name="author" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)}/>
 
                         <label for="genre">GENRE</label>
                         <select id="genre" name="genre">
@@ -32,9 +35,11 @@ const AddBook = ({open, onClose}) => {
                         </select>
                         <label>REVIEW</label>
                         <div id="reviewtext-div">
-                            <textarea rows="10" cols="45" placeholder='Type a short review for the book'/>
+                            <div id="reviewtext-holder">
+                                <textarea rows="10" cols="45" placeholder='Type a short review for the book'/>
+                            </div>
                         </div>
-                        <input type="submit" value="Save"/>
+                        <input type="submit" value="Save" id="save-btn"/>
                     </form>
                 </div>
             </div>
