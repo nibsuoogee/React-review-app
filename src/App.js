@@ -1,6 +1,6 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
-import Menu from './components/Menu/menu.js';
+import Menu from './components/Menu/Menu.jsx';
 import { useState } from 'react';
 import AddBook from './components/AddBook/BookPopUp';
 
@@ -19,6 +19,7 @@ function App() {
       image: "https://kbimages1-a.akamaihd.net/a5312ed2-bc80-4f4c-972b-c24dc5990bd5/166/300/False/george-orwell-1984-4.jpg",
       stars: 4
     },
+    /*
     {
       id: 2,
       title: "Metro 2033",
@@ -27,7 +28,7 @@ function App() {
       review: "If you like the games, you will love the books",
       image: "https://upload.wikimedia.org/wikipedia/fi/thumb/8/8b/Metro_2033.jpg/200px-Metro_2033.jpg",
       stars: 5
-    }
+    }*/
   ]);
 
   const [openBookPopup, setOpenBookPopup] = useState(false)

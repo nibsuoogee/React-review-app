@@ -5,10 +5,10 @@ function MenuTrack(props) {
 
   useEffect(() => {
     const track = trackRef.current;
-
+    
+    
     const handleMouseDown = (e) => {
       track.dataset.mouseDownAt = e.clientX;
-      
     };
 
     const handleMouseUp = () => {
@@ -50,7 +50,7 @@ function MenuTrack(props) {
 
   return (
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      {/*<img class="image" src={props.mediaItems.map((media) => (media.image))} draggable="false" />*/}
+      <img class="image" src={props.mediaItems.map((media) => (media.image))} draggable="false" />
     </div>
   );
 
