@@ -30,13 +30,15 @@ function App() {
 
   return (
     <body>
-      <div className="App">
-        {/*<button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>*/}
-          <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}
+      <header className='buttonbar'>
+      <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}
            >
             <h3>Review Popup</h3>
           </ReviewPopup>
         <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
+      </header>
+      <div className="App">
+        {/*<button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>*/}
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
         <Slider {...settings} mediaItems={mediaItems}>
           {mediaItems.map((item) => (

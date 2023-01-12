@@ -2,15 +2,14 @@ img{
     height: 300px;
     width: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }   
 
 body{
     background-color: black;
-    overflow: hidden;
     height: auto;
     width: auto;
-    margin-bottom: 500px;
+    overflow: hidden;
 }
 
 .App{
@@ -21,4 +20,8 @@ body{
 
 .slick-dots li.slick-active button:before {
     color:black !important;
+}
+
+#test{
+    color: white;
 }
