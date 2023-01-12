@@ -1,6 +1,5 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
-import Menu from './components/Menu/Menu.jsx';
 import { useState } from 'react';
 import AddBook from './components/AddBook/BookPopUp';
 import Slider from "react-slick";
@@ -11,36 +10,12 @@ import { books } from "./Data.js"
 function App() {
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
     ]
   };
   
@@ -86,19 +61,13 @@ function App() {
 
   return (
     <body>
-    <div className="App">
-      <header className="App-header">
-        {/*<Menu mediaItems={mediaItems}/>*/}
+      <div className="App">
         <button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>
           <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}
            setBookReview={handleNewBookReview} mediaItems={mediaItems}>
-            <h3>Review Popup</h3>
           </ReviewPopup>
         <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
-        <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} />
-      </header>
-      </div>
-      <div className="App">
+          <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} />
         <Slider {...settings}>
         {books.map((item) =>(
           <div className="card">
