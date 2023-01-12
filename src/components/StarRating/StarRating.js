@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import './StarRating.css'
-//import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 // StarRating component credit to Prem Kumar @codegeous
 const Rate = ({ count, rating, color, onRating }) => {
