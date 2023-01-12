@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { books } from "./Data.js"
 import { settings } from "./Settings.jsx"
+import { FaBeer } from 'react-icons/fa';
 
 function App() {
   
@@ -30,13 +31,18 @@ function App() {
 
   return (
     <body>
-      <header className='buttonbar'>
-      <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}
-           >
+      <div className='buttonbar'>
+        <div id="addbtn">
+          <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}>
             <h3>Review Popup</h3>
-          </ReviewPopup>
-        <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
-      </header>
+            </ReviewPopup>
+          <button onClick={() => setOpenBookPopup(true)}>Add a book </button>
+        </div>
+        <div id="searchbtn">
+          <button>Search</button>
+        </div>
+      </div>
+
       <div className="App">
         {/*<button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>*/}
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
