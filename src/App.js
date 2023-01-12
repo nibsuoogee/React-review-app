@@ -6,18 +6,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { books } from "./Data.js"
+import { settings } from "./Settings.jsx"
 
 function App() {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-    ]
-  };
   
   // Mediakappaleiden tila säilötään vaikka tässä globaalilla tasolla mediaItemsiin
   // tämä tila syötetään alas esim karuselliin sekä popupiin
