@@ -9,7 +9,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     const [genre, setGenre] = useState("")
     const [review, setReview] = useState("")
     const [image, setImage] = useState("")
-    const [stars, setStars] = useState("")
+    const [stars, setStars] = useState(0)
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value)
@@ -36,9 +36,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     }
 
     const handleSubmit = (event) => {
-        console.log(event)
         const newReviewID = mediaItems.reduce((prev,current) => (prev.id > current.id) ? prev.id + 1 : current.id + 1);
-        console.log(newReviewID)
         const newReview = [{
             id: newReviewID,
             title: title,
