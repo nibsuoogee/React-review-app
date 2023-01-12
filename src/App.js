@@ -156,7 +156,6 @@ function App() {
           </ReviewPopup>
         <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
-      </header>
       </div>
       <div className="App">
         <Slider {...settings}>
