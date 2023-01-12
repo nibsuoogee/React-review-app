@@ -68,8 +68,7 @@ function App() {
   ]);
 
   const [openBookPopup, setOpenBookPopup] = useState(false) 
-  /* have one state for current book and popup open */
-  /* array map mdn to clone state */
+
   const [currentBook, setCurrentBook] = useState(null)
   
   const HandleSetCurrentBook = (id) => {
@@ -78,9 +77,7 @@ function App() {
   }
 
   const handleNewBookReview = (book) => {
-    const newState = mediaItems.map((mediaBook) => 
-      mediaBook.id === book.id ? book : mediaBook
-    )
+    const newState = mediaItems.concat(book);
     setMediaItems(newState ? { ...newState } : null)
   }
 
@@ -91,11 +88,11 @@ function App() {
         {/*<Menu mediaItems={mediaItems}/>*/}
         <button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>
           <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}
-           setBookReview={handleNewBookReview} mediaItems={mediaItems}>
+           >
             <h3>Review Popup</h3>
           </ReviewPopup>
         <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
-        <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} />
+        <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
       </header>
       </div>
       <div className="App">

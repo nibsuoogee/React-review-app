@@ -17,7 +17,8 @@ function ReviewPopup(props) {
                                     <img src={media.image} alt="Media cover image"/>
                                     <div className="star-rating">
                                         <Rate rating={media.stars} 
-                                        onRating={(rate) => props.setBookReview(rate)}/>
+                                        /* rating should only happen in the new review popup */
+                                        /*onRating={(rate) => props.setBookReview(rate)}*//>
                                     </div>
                                     
                                 </td>
