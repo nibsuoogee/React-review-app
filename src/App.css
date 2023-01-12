@@ -7,14 +7,12 @@ img{
 
 body{
     background-color: black;
-    height: auto;
-    width: auto;
     overflow: hidden;
 }
 
 .App{
     background-color: black;
-    padding: 20% 5%;
+    padding: 3% 10%;
     
 }
 
@@ -24,4 +22,20 @@ body{
 
 #test{
     color: white;
+}
+
+.buttonbar{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    margin-top: 300px;
+}
+
+#searchbtn{
+    margin-left: 50px;
+}
+
+#addbtn{
+    margin-left: 350px;
 }
