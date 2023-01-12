@@ -75,6 +75,8 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                             <option value="history">History</option>
                             <option value="biography">Biography</option>
                             <option value="cooking">Cooking</option>
+                            <option value="self-help">Cooking</option>
+                            <option value="finance">Cooking</option>
                         </select>
                         <label>REVIEW</label>
                         <div id="reviewtext-div">

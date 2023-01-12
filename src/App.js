@@ -38,8 +38,6 @@ function App() {
           </ReviewPopup>
         <button onClick={() => setOpenBookPopup(true)}>Add a book</button>
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
-      </div>
-      <div className="App">
         <Slider {...settings} mediaItems={mediaItems}>
           {mediaItems.map((item) => (
           <div className="card">
@@ -48,6 +46,7 @@ function App() {
           ))}
         </Slider>
       </div>
+    
     </body>
   );
 }
