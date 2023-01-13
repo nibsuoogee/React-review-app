@@ -59,7 +59,8 @@ body{
     background-color: white;
 }
 
-#searchbtndiv{
+#searchbardiv{
+    padding-top: 1.5%;
     margin-left: 2%;
     height: 75px;
     width: 75px;
@@ -76,4 +77,11 @@ body{
 
 #searchbtn:hover{
     background-color: white;
+}
+
+#searchbar{
+    padding-top: 30;
+    margin: 3%;
+    background-color: white;
+    width: 250px;
 }
