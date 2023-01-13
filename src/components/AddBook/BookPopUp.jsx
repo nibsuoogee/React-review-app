@@ -8,7 +8,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     const [author, setAuthor] = useState("")
     const [genre, setGenre] = useState("")
     const [review, setReview] = useState("")
-    const [image, setImage] = useState("")
+    const [image, setImage] = useState("https://static.vecteezy.com/system/resources/thumbnails/001/984/036/small/isometric-book-illustrated-on-white-background-free-vector.jpg")
     const [stars, setStars] = useState(0)
 
     const handleTitleChange = (event) => {
