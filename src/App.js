@@ -48,9 +48,10 @@ function App() {
           {mediaItems.filter((val) => {
             if (searchTerm == ""){
               return val
-            } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            } else if ((val.author.toLowerCase().includes(searchTerm.toLowerCase())) || (val.title.toLowerCase().includes(searchTerm.toLowerCase()))){
               return val
             }
+            
           }).map((item) => (
           <div className="card">
             <img src={item.image} alt={item.title} onClick={() => HandleSetCurrentBook(item.id)}/>
