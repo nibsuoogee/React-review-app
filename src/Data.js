@@ -5,7 +5,7 @@ export const books = [
       author: "George Orwell",
       genres: ["Dystopian","Sci-fi"],
       review: "One of the books of all time, highly recommend to anyone interested in society and surveillance.",
-      image: "https://kbimages1-a.akamaihd.net/a5312ed2-bc80-4f4c-972b-c24dc5990bd5/166/300/False/george-orwell-1984-4.jpg",
+      image: "https://images.booksense.com/images/935/262/9780452262935.jpg",
       stars: 4
   },
   {
@@ -50,7 +50,7 @@ export const books = [
       author: "JS Cript",
       genres: ["Horror"],
       review: "Help D:",
-      image: "https://m.media-amazon.com/images/I/51IWL7y8ecL._AC_SY780_.jpg",
+      image: "https://media.wiley.com/product_data/coverImage300/27/07645011/0764501127.jpg",
       stars: 1
     },
   {

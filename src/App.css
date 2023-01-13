@@ -1,17 +1,21 @@
 *{
     box-sizing: border-box;
+    position: relative;
+    z-index: 10;
 }
 
 img{
-    height: 300px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
+    max-height: 300px;
+    max-width: 200px;
     object-fit: cover;
     border-radius: 10px;
 }   
 
 body{
     background-color: black;
-    overflow: hidden;
+    visibility: visible;
 }
 
 i{
@@ -20,8 +24,7 @@ i{
 
 .App{
     background-color: black;
-    padding: 3% 10%;
-    
+    padding: 2% 15%;
 }
 
 .slick-dots li.slick-active button:before {
@@ -37,11 +40,11 @@ i{
     width: 50%;
     text-align: center;
     display: flex;
-    margin-top: 300px;
+    margin-top: 18%;
 }
 
 #addbtndiv{
-    margin-left: 300px;
+    margin-left: 40%;
     height: 75px;
     width: 75px;
     color: #F5D10D
@@ -61,7 +64,7 @@ i{
 }
 
 #searchbtndiv{
-    margin-left: 50px;
+    margin-left: 2%;
     height: 75px;
     width: 75px;
     border-radius: 50%;
@@ -78,4 +81,3 @@ i{
 #searchbtn:hover{
     background-color: white;
 }
-
