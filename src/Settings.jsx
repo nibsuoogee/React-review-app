@@ -1,11 +1,21 @@
 export const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 8,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
+    swipe: true,
     responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
       {
         breakpoint: 1800,
         settings: {

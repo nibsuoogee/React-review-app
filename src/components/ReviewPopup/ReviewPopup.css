@@ -1,3 +1,9 @@
+*{
+    z-index: 10000 !important;
+    position: relative;
+}
+
+
 .reviewpopup {
     position: fixed;
     top: 0;
@@ -17,6 +23,8 @@
     max-width: 500px;
     background-color: rgb(29, 29, 29);
     opacity: 1;
+    z-index: 10000 !important;
+    position: relative;
 }
 
 .reviewpopup-inner .close-btn {
@@ -51,7 +59,7 @@
     cursor: pointer; /* Mouse pointer on hover */
   }
   
-  /* Darker background on mouse-over */
+/* Darker background on mouse-over */
 .close-btn:hover {
 color: #5b5b5be7;
 }

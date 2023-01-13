@@ -15,7 +15,7 @@ img{
 
 body{
     background-color: black;
-    overflow: hidden;
+    visibility: visible;
 }
 
 i{
