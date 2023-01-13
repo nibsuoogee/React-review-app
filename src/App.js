@@ -24,7 +24,7 @@ function App() {
     console.log(mediaItems)
     const newState = mediaItems.concat(book);
     console.log(newState)
-    setMediaItems(newState ? { ...newState } : null)
+    setMediaItems(newState ? [ ...newState ] : null)
   }
 
   const [searchTerm, setSearchTerm] = useState("")
