@@ -10,7 +10,6 @@ import { settings } from "./Settings.jsx"
 
 
 function App() {
-  
   const [mediaItems, setMediaItems] = useState(books);
 
   const [openBookPopup, setOpenBookPopup] = useState(false) 
@@ -28,6 +27,9 @@ function App() {
     setMediaItems(newState ? { ...newState } : null)
   }
 
+  const [searchTerm, setSearchTerm] = useState("")
+
+  
   return (
     <body>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -36,13 +38,20 @@ function App() {
           <button id="addbtn" onClick={() => setOpenBookPopup(true)}><i class="fa fa-plus fa-2x"></i></button>
         </div>
         <div id="searchbtndiv">
-          <button id="searchbtn"><i class="fa fa-search fa-2x"></i></button>
+          <input type="text" placeholder='search' onChange={(e) => {setSearchTerm(e.target.value)}}/>
+          {/*<button id="searchbtn"><i class="fa fa-search fa-2x"></i></button>*/}
         </div>
       </div>
 
       <div className="App">
         <Slider {...settings} mediaItems={mediaItems}>
-          {mediaItems.map((item) => (
+          {mediaItems.filter((val) => {
+            if (searchTerm == ""){
+              return val
+            } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+              return val
+            }
+          }).map((item) => (
           <div className="card">
             <img src={item.image} alt={item.title} onClick={() => HandleSetCurrentBook(item.id)}/>
           </div>
