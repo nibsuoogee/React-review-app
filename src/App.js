@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { books } from "./Data.js"
 import { settings } from "./Settings.jsx"
-import { FaBeer } from 'react-icons/fa';
+
 
 function App() {
   
@@ -31,20 +31,20 @@ function App() {
 
   return (
     <body>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <div className='buttonbar'>
-        <div id="addbtn">
+        <div id="addbtndiv">
           <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook}>
             <h3>Review Popup</h3>
             </ReviewPopup>
-          <button onClick={() => setOpenBookPopup(true)}>Add a book </button>
+          <button id="addbtn" onClick={() => setOpenBookPopup(true)}><i class="fa fa-plus fa-2x"></i></button>
         </div>
-        <div id="searchbtn">
-          <button>Search</button>
+        <div id="searchbtndiv">
+          <button id="searchbtn"><i class="fa fa-search fa-2x"></i></button>
         </div>
       </div>
 
       <div className="App">
-        {/*<button onClick={() => HandleSetCurrentBook(2)}>Open Review Popup</button>*/}
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
         <Slider {...settings} mediaItems={mediaItems}>
           {mediaItems.map((item) => (
