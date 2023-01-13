@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 img{
     height: 300px;
     width: 200px;
@@ -8,6 +12,10 @@ img{
 body{
     background-color: black;
     overflow: hidden;
+}
+
+i{
+    color: black;
 }
 
 .App{
@@ -32,10 +40,42 @@ body{
     margin-top: 300px;
 }
 
-#searchbtn{
-    margin-left: 50px;
+#addbtndiv{
+    margin-left: 300px;
+    height: 75px;
+    width: 75px;
+    color: #F5D10D
 }
 
-#addbtn{
-    margin-left: 350px;
+#addbtn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding-top: 5px;
+    background-color: #F5D10D;
 }
+
+#addbtn:hover{
+    background-color: white;
+}
+
+#searchbtndiv{
+    margin-left: 50px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+#searchbtn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #F5D10D;
+}
+
+#searchbtn:hover{
+    background-color: white;
+}
+
