@@ -22,16 +22,11 @@ function App() {
   }
 
   const handleNewBookReview = (book) => {
-    console.log(mediaItems)
     const newState = mediaItems.concat(book);
-    console.log(newState)
     setMediaItems(newState ? [ ...newState ] : null)
   }
 
   const handleRemoveReview = (book) => {
-    console.log(book)
-    console.log(book.id)
-    console.log(mediaItems)
     const [extractedBook] = book;
     const newState = mediaItems.filter(obj => obj.id !== extractedBook.id);
     console.log(newState)
