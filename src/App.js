@@ -16,9 +16,28 @@ function App() {
 
   const [currentBook, setCurrentBook] = useState(null)
 
+  const [hasDragged, setHasDragged] = useState(false);
+
+  const handleMouseDown = () => {
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+  };
+
+  const handleMouseMove = () => {
+    setHasDragged(true);
+  };
+
+  const handleMouseUp = () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('mouseup', handleMouseUp);
+  };
+
   const HandleSetCurrentBook = (id) => {
-    const bookWithId = mediaItems.find(obj => obj.id === id)
-    setCurrentBook(bookWithId ? [{ ...bookWithId }] : null)
+    if (!hasDragged) {
+      const bookWithId = mediaItems.find(obj => obj.id === id)
+      setCurrentBook(bookWithId ? [{ ...bookWithId }] : null)
+    }
+    setHasDragged(false);
   }
 
   const handleNewBookReview = (book) => {
@@ -34,7 +53,6 @@ function App() {
   }
 
   const [searchTerm, setSearchTerm] = useState("")
-
   
   return (
     <body>
@@ -59,7 +77,7 @@ function App() {
             
           }).map((item) => (
           <div className="card">
-            <img src={item.image} alt={item.title} onClick={() => HandleSetCurrentBook(item.id)}/>
+            <img src={item.image} alt={item.title} onClick={() => HandleSetCurrentBook(item.id)} onMouseDown={handleMouseDown}/>
           </div>
           ))}
         </Slider>
