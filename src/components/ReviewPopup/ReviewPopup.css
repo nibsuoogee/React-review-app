@@ -66,6 +66,14 @@
 color: #5b5b5be7;
 }
 
+#trash-btn{
+    color: rgb(88,88,88);
+}
+
+#trash-btn:hover{
+    color: #b83636e7
+}
+
 .data_box {
     background-color: beige;
     border-radius: 6px;
