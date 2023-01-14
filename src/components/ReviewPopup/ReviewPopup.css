@@ -18,9 +18,6 @@
 .reviewpopup-inner {
     position: absolute;
     padding: 32px;
-    width: 80%;
-    height: 47%;
-    max-width: 1000px;
     background-color: rgb(29, 29, 29);
     opacity: 1;
     z-index: 10000 !important;
@@ -45,12 +42,14 @@
     
 }
 
-.image_and_stars {
-    vertical-align: text-top;
-}
-
 .review_table {
     padding-top: 32px;
+    
+}
+
+.review-box{
+    display: flex;
+    gap: 2rem;
 }
 
 .close-btn {
@@ -64,15 +63,7 @@
   
 /* Darker background on mouse-over */
 .close-btn:hover {
-    color: #5b5b5be7;
-}
-
-#trash-btn {
-    color: rgb(88, 88, 88);
-}
-
-#trash-btn:hover {
-    color: #b83636e7;
+color: #5b5b5be7;
 }
 
 .data_box {
@@ -80,11 +71,6 @@
     border-radius: 6px;
 }
 
-.review_box {
-    background-color: beige;
-    padding: 8px;
-    
-}
 
 .star-rating {
     width: 100%;
@@ -92,9 +78,3 @@
     margin: 0 auto; 
 }
 
-.post-date-text {
-    color: rgba(255, 217, 0, 0.633);
-    text-align: center;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 12px;
-}
