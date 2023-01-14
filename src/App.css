@@ -90,6 +90,12 @@ body{
   animation-duration: 5s;
 }
 
+.data_type_text{
+  color: gold;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
 @keyframes fadeInOut {
   0% {
     opacity: 0;
