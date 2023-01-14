@@ -47,6 +47,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
             stars: stars
         }]
         setMediaItems(newReview)
+        onClose()
         event.preventDefault()
     }
 
