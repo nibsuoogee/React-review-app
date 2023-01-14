@@ -1,9 +1,10 @@
-*{
-    z-index: 10000 !important;
-    position: relative;
+h3{
+    color: gold;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
 }
 
-.reviewpopup {
+.pop-up-outer{
     position: fixed;
     top: 0;
     left: 0;
@@ -15,41 +16,16 @@
     align-items: center;
 }
 
-.reviewpopup-inner {
+.pop-up-inner
+{
     position: absolute;
     padding: 32px;
     background-color: rgb(29, 29, 29);
     opacity: 1;
     z-index: 10000 !important;
-}
-
-.reviewpopup-inner .close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-}
-
-.data_type_text {
-    color: gold;
-    text-align: center;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.review_data {
-    padding: 4px;
-    
-}
-
-.review_table {
-    padding-top: 32px;
-    
-}
-
-.review-box{
-    display: flex;
-    gap: 2rem;
+    border-radius: 10px;
+    height: 55vh;
+    width: 60vh;
 }
 
 .close-btn {
@@ -59,30 +35,73 @@
     padding: 12px 16px; /* Some padding */
     font-size: 32px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+
 }
   
-/* Darker background on mouse-over */
-.close-btn:hover {
-color: #5b5b5be7;
+.content{
+    display: flex;
+    gap: 6vh;
+
 }
 
+.image_and_stars{
+    text-align: center;
+
+}
+
+.image_and_stars img  {
+    margin-bottom: 2vh
+}
+
+.image_and_stars .star-rating {
+    margin-bottom: 2vh;
+}
+
+.review_box{
+    max-width: 17rem;
+}
+
+.data_box{
+    display: flex;
+}
+
+.data_type_text{
+    display: flex;
+}
+
+.datadiv{
+    font-size: 1.5vh;
+    gap: 3vh;
+}
+
+#titledata{
+    gap: 6.5vh
+}
+
+#reviewtext{
+    width: 25vh;
+    height: 8vh;
+    
+}
+
+.titletext{
+    background-color: beige;
+    width: 25vh;
+    height: 4vh;
+}
+
+.close-btn:hover {
+    color: #5b5b5be7;
+}
+    
 #trash-btn{
     color: rgb(88,88,88);
+    
 }
 
 #trash-btn:hover{
     color: #b83636e7
 }
-
-.data_box {
-    background-color: beige;
-    border-radius: 6px;
-}
-
-
-.star-rating {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto; 
-}
-
