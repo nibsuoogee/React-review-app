@@ -20,6 +20,18 @@ function ReviewPopup(props) {
         props.handleRemoveReview(props.triggerBook);   
     }
 
+    const displayDate = (time) => {
+        return (time) ? (
+            <div>
+                <h4 className="post-date-text">Posted:</h4>
+                <h4 className="post-date-text">{time.toLocaleDateString() } { time.toLocaleTimeString() }</h4>
+            </div>
+        ) : 
+        <div>
+            <h4 className="post-date-text">No post date</h4>;
+        </div>
+    }
+
     return (props.triggerBook) ? (
         <div className="reviewpopup">
             <div className="reviewpopup-inner">
@@ -35,11 +47,12 @@ function ReviewPopup(props) {
                                         <Rate rating={media.stars} />
                                     </div>
                                     <div>
+                                        {displayDate(media.time)}
+                                    </div>
+                                    <div>
                                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                                         <button className="close-btn" id="trash-btn" onClick={() => handleConfirmState(true)}><i class="fa fa-trash"></i></button>
                                     </div>
-                                    
-                                    
                                 </td>
                                 <td>
                                     <table class="review_table">
