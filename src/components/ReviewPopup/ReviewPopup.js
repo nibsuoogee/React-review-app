@@ -1,13 +1,23 @@
 import React from 'react'
+import { useState } from 'react';
 import './ReviewPopup.css'
 import Rate from '../StarRating/StarRating'
+import Confirmation from '../Confirmation/Confirmation.js'
 
 
 function ReviewPopup(props) {
 
+    
+    const [confirmState, setConfirmState] = useState(false);
+
+    const handleConfirmState = (value) => {
+        setConfirmState(value)
+    }
+
     const handleRemove = () => {
+        handleConfirmState(false);
         props.setTrigger(null);
-        props.handleRemoveReview(props.triggerBook);
+        props.handleRemoveReview(props.triggerBook);   
     }
 
     return (props.triggerBook) ? (
@@ -26,7 +36,7 @@ function ReviewPopup(props) {
                                     </div>
                                     <div>
                                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                                        <button className="close-btn" onClick={handleRemove}><i class="fa fa-warning"></i></button>
+                                        <button className="close-btn" id="trash-btn" onClick={() => handleConfirmState(true)}><i class="fa fa-trash"></i></button>
                                     </div>
                                     
                                     
@@ -68,10 +78,14 @@ function ReviewPopup(props) {
                         </table>
                     </div>
                 ))}
-                
-
-            </div>    
+            </div>  
+            
+            <div className='popups'>
+                <Confirmation open={confirmState} onClose={() => handleConfirmState(false)} onConfirm={() => handleRemove()}/>
+            </div>
+            
         </div>
+        
     ) : "";
 }
 

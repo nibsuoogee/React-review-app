@@ -4,7 +4,7 @@
 }
 
 
-.reviewpopup {
+.confirmpopup {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.reviewpopup-inner {
+.confirmpopup-inner {
     position: relative;
     padding: 32px;
     width: 70%;
@@ -27,68 +27,27 @@
     position: relative;
 }
 
-.reviewpopup-inner .close-btn {
+.confirmpopup-inner .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
 }
 
-.data_type_text {
-    color: gold;
-    text-align: center;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-weight: bold;
-    font-size: 20px;
+.confirmpopup-inner #confirm-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
 }
 
-.review_data {
-    padding: 4px;
-    
-}
-
-.image_and_stars {
-    vertical-align: text-top;
-}
-
-.review_table {
-    padding-top: 32px;
-}
-
-.close-btn {
+.confirm-btn {
     background-color: transparent; /* Blue background */
     border: none; /* Remove borders */
     color: gold; /* White text */
     padding: 12px 16px; /* Some padding */
     font-size: 32px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
-  }
-  
-/* Darker background on mouse-over */
-.close-btn:hover {
-    color: #5b5b5be7;
 }
 
-#trash-btn {
-    color: rgb(88, 88, 88);
-}
-
-#trash-btn:hover {
-    color: #b83636e7;
-}
-
-.data_box {
-    background-color: beige;
-    border-radius: 6px;
-}
-
-.review_box {
-    background-color: beige;
-    padding: 8px;
-    
-}
-
-.star-rating {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto; 
+.confirm-btn:hover {
+    color: #db0000e7;
 }
