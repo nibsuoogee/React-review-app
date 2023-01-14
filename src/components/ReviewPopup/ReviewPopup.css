@@ -36,10 +36,14 @@
 .data_type_text {
     color: gold;
     text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .review_data {
     padding: 4px;
+    
 }
 
 .image_and_stars {
@@ -72,6 +76,7 @@ color: #5b5b5be7;
 .review_box {
     background-color: beige;
     padding: 8px;
+    
 }
 
 .star-rating {

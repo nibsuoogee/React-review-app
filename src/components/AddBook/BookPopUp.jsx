@@ -75,8 +75,8 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                             <option value="history">History</option>
                             <option value="biography">Biography</option>
                             <option value="cooking">Cooking</option>
-                            <option value="self-help">Cooking</option>
-                            <option value="finance">Cooking</option>
+                            <option value="self-help">Self-help</option>
+                            <option value="finance">Finance</option>
                         </select>
                         <label>REVIEW</label>
                         <div id="reviewtext-div">
@@ -90,7 +90,11 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                         <br></br>
                         <label>STARS</label>
                         <Rate rating={stars} onRating={(rate) => setStars(rate)}/>
-                        <input type="submit" value="Save" id="save-btn"/>
+                        <div className='container'>
+                            <div class="btn-holder">
+                                <input type="submit" value="Save" id="save-btn"/>
+                            </div>
+                        </div>            
                     </form>
                 </div>
             </div>
