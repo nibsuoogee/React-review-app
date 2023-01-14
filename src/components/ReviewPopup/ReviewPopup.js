@@ -55,6 +55,9 @@ function ReviewPopup(props) {
                     </div>
                 ))}
             </div>  
+            <div className='popups'>
+                <Confirmation open={confirmState} onClose={() => handleConfirmState(false)} onConfirm={() => handleRemove()}/>
+            </div>
         </div>
     ) : null;
 }
