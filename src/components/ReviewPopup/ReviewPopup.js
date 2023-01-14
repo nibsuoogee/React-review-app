@@ -54,7 +54,6 @@ function ReviewPopup(props) {
                                         <tr>
                                             <td class="data_type_text">Review</td>
                                         </tr>
-
                                         <tr>
                                             <td colspan="2">
                                                 <div class="review_box">
