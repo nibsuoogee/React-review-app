@@ -30,46 +30,47 @@ function ReviewPopup(props) {
     }
 
     return (props.triggerBook) ? (
-        <div className="reviewpopup">
-            <div className="reviewpopup-inner">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <div className="pop-up-outer">
+            <div className='pop-up-inner'>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <button className="close-btn" onClick={() => props.setTrigger(null)}><i class="fa fa-close"></i></button>
                 {props.triggerBook.map((media) => (
-                    <div className="review-box" key={media.id}>
-                        <div class="image_and_stars">
-                            <img src={media.image} alt="Media cover image"/>
-                            <div className="star-rating">
-                                <Rate rating={media.stars} />
-                            </div>
-                            <div>
-                                {displayDate(media.time)}
-                            </div>
-                            <div>
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                                <button className="close-btn" id="trash-btn" onClick={() => handleConfirmState(true)}><i class="fa fa-trash"></i></button>
-                            </div>
+                <div className='content'>
+                    <div class="image_and_stars">
+                        <img src={media.image} alt="Media cover image"/>
+                        <div className="star-rating">
+                            <Rate rating={media.stars} />
                         </div>
-                        <div class="review_table">
-                            <div class="data_type_text">Title</div>
-                            <div class="data_box">
-                                <h3 class="review_data">{ media.title }</h3>
-                            </div>
-                            <div class="data_type_text">Author</div>
-                            <div class="data_box">
-                                <h3 class="review_data">{ media.author }</h3>
-                            </div>
-                            <div class="data_type_text">Genres</div>
-                            <div class="data_box">
-                                <h3 class="review_data">{ media.genres }</h3>
-                            </div>
-                            <div class="data_type_text">Review</div>
-                            <div class="review_box">
-                                <p>{ media.review }</p>
-                            </div>    
+                        <div>
+                            {displayDate(media.time)}
+                        </div>
+                        
+                    </div>
+                    <div className='data'>
+                        <div id="titledata" class="datadiv">
+                            <h3>Title</h3>
+                            <h2 className='titletext'>{media.title}</h2>
+                        </div>
+                        <div id="authordata" class="datadiv">
+                            <h3>Author</h3>
+                            <h2 className='titletext'>{media.author}</h2>
+                        </div>
+                        <div id="genredata" class="datadiv">
+                            <h3>Genres</h3>
+                            <h2 className='titletext'>{media.genres}</h2>
+                        </div>
+                        <div id="reviewdata" class="datadiv">
+                            <h3>Review</h3>
+                            <p className='titletext' id="reviewtext">{media.review}</p>
                         </div>
                     </div>
+                </div>
                 ))}
-            </div>  
+                <div>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+                    <button className="close-btn" id="trash-btn" onClick={() => handleConfirmState(true)}><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
             <div className='popups'>
                 <Confirmation open={confirmState} onClose={() => handleConfirmState(false)} onConfirm={() => handleRemove()}/>
             </div>
