@@ -18,6 +18,16 @@ function App() {
 
   const [hasDragged, setHasDragged] = useState(false);
 
+  const [showInfo, setShowInfo] = useState(false);
+
+  const [infoMessage, setInfoMessage] = useState("");
+
+  const handleInfoMessage = (message) => {
+    setInfoMessage(message);
+    setShowInfo(true);
+    setTimeout(() => setShowInfo(false), 5000);
+  }
+
   const handleMouseDown = () => {
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
@@ -42,7 +52,8 @@ function App() {
 
   const handleNewBookReview = (book) => {
     const newState = mediaItems.concat(book);
-    setMediaItems(newState ? [ ...newState ] : null)
+    setMediaItems(newState ? [ ...newState ] : null);
+    handleInfoMessage("Entry added");
   }
 
   const handleRemoveReview = (book) => {
@@ -50,6 +61,7 @@ function App() {
     const newState = mediaItems.filter(obj => obj.id !== extractedBook.id);
     console.log(newState)
     setMediaItems(newState ? [ ...newState ] : null)
+    handleInfoMessage("Entry removed");
   }
 
   const [searchTerm, setSearchTerm] = useState("")
@@ -87,6 +99,11 @@ function App() {
         <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook} handleRemoveReview={handleRemoveReview}>
             <h3>Review Popup</h3>
             </ReviewPopup>
+          {showInfo && (
+            <div className="animated-info">
+              <div class="data_type_text">{ infoMessage }</div>
+            </div>
+          )}
       </div>
     
     </body>
