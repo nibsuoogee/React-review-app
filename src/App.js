@@ -38,7 +38,7 @@ function App() {
           <button id="addbtn" onClick={() => setOpenBookPopup(true)}><i class="fa fa-plus fa-2x"></i></button>
         </div>
         <div id="searchbardiv">
-          <input id="searchbar" type="text" placeholder='search' onChange={(e) => {setSearchTerm(e.target.value)}}/>
+          <input id="searchbar" type="text" placeholder='Search' onChange={(e) => {setSearchTerm(e.target.value)}} />
         </div>
       </div>
 
