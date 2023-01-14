@@ -8,6 +8,15 @@ export const settings = {
     swipe: true,
     responsive: [
       {
+        breakpoint: 2200,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 1921,
         settings: {
           slidesToShow: 6,
@@ -19,7 +28,7 @@ export const settings = {
       {
         breakpoint: 1800,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true,
           dots: true
@@ -28,7 +37,7 @@ export const settings = {
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
           dots: true
@@ -37,14 +46,14 @@ export const settings = {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
           dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,

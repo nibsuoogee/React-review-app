@@ -64,7 +64,7 @@ export const books = [
     },
   {
       id: 8,
-      title: "The ingelligent inverstor",
+      title: "The intelligent investor",
       author: "Benjamin Graham",
       genres: ["Finance"],
       review: "Free money hack",
