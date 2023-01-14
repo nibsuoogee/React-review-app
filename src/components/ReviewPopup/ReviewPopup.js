@@ -4,6 +4,12 @@ import Rate from '../StarRating/StarRating'
 
 
 function ReviewPopup(props) {
+
+    const handleRemove = () => {
+        props.setTrigger(null);
+        props.handleRemoveReview(props.triggerBook);
+    }
+
     return (props.triggerBook) ? (
         <div className="reviewpopup">
             <div className="reviewpopup-inner">
@@ -18,6 +24,11 @@ function ReviewPopup(props) {
                                     <div className="star-rating">
                                         <Rate rating={media.stars} />
                                     </div>
+                                    <div>
+                                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+                                        <button className="close-btn" onClick={handleRemove}><i class="fa fa-warning"></i></button>
+                                    </div>
+                                    
                                     
                                 </td>
                                 <td>
