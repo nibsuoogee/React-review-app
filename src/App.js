@@ -1,6 +1,6 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AddBook from './components/AddBook/BookPopUp';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -22,13 +22,31 @@ function App() {
 
   const [infoMessage, setInfoMessage] = useState("");
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    let intervalId = null;
+    if (activeIndex) {
+      intervalId = setInterval(() => {
+        setTime(time => time + 1);
+      }, 10);
+    } else if (!activeIndex && time !== 0) {
+      clearInterval(intervalId);
+      setTime(0);
+    }
+    return () => clearInterval(intervalId);
+  }, [activeIndex, time]);
+
   const handleInfoMessage = (message) => {
     setInfoMessage(message);
     setShowInfo(true);
     setTimeout(() => setShowInfo(false), 5000);
   }
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (index) => {
+    setActiveIndex(index);
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
   };
@@ -38,6 +56,7 @@ function App() {
   };
 
   const handleMouseUp = () => {
+    setActiveIndex(null);
     window.removeEventListener('mousemove', handleMouseMove);
     window.removeEventListener('mouseup', handleMouseUp);
   };
@@ -89,7 +108,9 @@ function App() {
             
           }).map((item) => (
           <div className="card">
-            <img src={item.image} alt={item.title} onClick={() => HandleSetCurrentBook(item.id)} onMouseDown={handleMouseDown}/>
+            <img src={item.image} alt={item.title} className={`slider-item ${activeIndex === item.id ? 'active' : ''}`} 
+            style={{transform: `scale(${item.id === activeIndex ?  0.8 + (-Math.sin(time / 20) * 0.02) : 1})`}}
+            onClick={() => HandleSetCurrentBook(item.id)} onMouseDown={() => handleMouseDown(item.id)}/>
           </div>
           ))}
         </Slider>
