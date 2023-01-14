@@ -92,3 +92,9 @@
     margin: 0 auto; 
 }
 
+.post-date-text {
+    color: rgba(255, 217, 0, 0.633);
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 12px;
+}
