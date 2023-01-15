@@ -39,7 +39,7 @@ function ReviewPopup(props) {
                     <div class="image_and_stars">
                         <img src={media.image} alt="Media cover image"/>
                         <div className="star-rating">
-                            <Rate rating={media.stars} />
+                            <Rate rating={media.stars} onlyDisplay={true}/>
                         </div>
                         <div>
                             {displayDate(media.time)}
