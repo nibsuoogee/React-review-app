@@ -45,20 +45,21 @@ function App() {
     setTimeout(() => setShowInfo(false), 5000);
   }
 
-  const handleMouseDown = (index) => {
+  const handleMouseEnter = (index) => {
+    setTimeout(() => {}, 1000);
     setActiveIndex(index);
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('mouseup', handleMouseLeave);
   };
 
   const handleMouseMove = () => {
     setHasDragged(true);
   };
 
-  const handleMouseUp = () => {
+  const handleMouseLeave = () => {
     setActiveIndex(null);
     window.removeEventListener('mousemove', handleMouseMove);
-    window.removeEventListener('mouseup', handleMouseUp);
+    window.removeEventListener('mouseup', handleMouseLeave);
   };
 
   const HandleSetCurrentBook = (id) => {
@@ -110,7 +111,7 @@ function App() {
           <div className="card">
             <img src={item.image} alt={item.title} className={`slider-item ${activeIndex === item.id ? 'active' : ''}`} 
             style={{transform: `scale(${item.id === activeIndex ?  0.8 + (-Math.sin(time / 20) * 0.02) : 1})`}}
-            onClick={() => HandleSetCurrentBook(item.id)} onMouseDown={() => handleMouseDown(item.id)}/>
+            onClick={() => HandleSetCurrentBook(item.id)} onMouseEnter={() => handleMouseEnter(item.id)} onMouseLeave={() => handleMouseLeave(item.id)}/>
           </div>
           ))}
         </Slider>
