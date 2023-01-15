@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import './StarRating.css'
 
 // StarRating component credit to Prem Kumar @codegeous
-const Rate = ({ count, rating, color, onRating }) => {
+const Rate = ({ count, rating, color, onRating, onlyDisplay }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
   const getColor = (index) => {
@@ -28,7 +28,7 @@ const Rate = ({ count, rating, color, onRating }) => {
           icon="star"
           onClick={() => onRating(idx)}
           style={{ color: getColor(idx) }}
-          onMouseEnter={() => setHoverRating(idx)}
+          onMouseEnter={!onlyDisplay ? () => setHoverRating(idx) : null}
           onMouseLeave={() => setHoverRating(0)}
         ><i class="fa fa-star"></i></icon>
 
@@ -55,6 +55,7 @@ Rate.defaultProps = {
     filled: "#ffd700",
     unfilled: "#5b5b5be7",
   },
+  onlyDisplay: false,
 };
 
 export default Rate;
