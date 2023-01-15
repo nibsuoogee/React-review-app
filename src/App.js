@@ -79,7 +79,6 @@ function App() {
   const handleRemoveReview = (book) => {
     const [extractedBook] = book;
     const newState = mediaItems.filter(obj => obj.id !== extractedBook.id);
-    console.log(newState)
     setMediaItems(newState ? [ ...newState ] : null)
     handleInfoMessage("Entry removed");
   }

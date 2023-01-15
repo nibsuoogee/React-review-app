@@ -38,7 +38,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     const handleSubmit = (event) => {
         const currentDateTime = new Date();
         console.log(currentDateTime);
-        const newReviewID = mediaItems.reduce((prev,current) => (prev.id > current.id) ? prev.id + 1 : current.id + 1);
+        const newReviewID = mediaItems.length === 0 ? 1 : mediaItems.reduce((prev, current) => (prev.id > current.id) ? prev.id : current.id) + 1;
         const newReview = [{
             id: newReviewID,
             title: title,
