@@ -25,7 +25,7 @@ function ReviewPopup(props) {
             </div>
         ) : 
         <div>
-            <h4 className="post-date-text">No post date</h4>;
+            <h4 className="post-date-text">No post date</h4>
         </div>
     }
 
