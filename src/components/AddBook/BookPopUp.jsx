@@ -8,8 +8,10 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     const [author, setAuthor] = useState("")
     const [genre, setGenre] = useState("")
     const [review, setReview] = useState("")
-    const [image, setImage] = useState("https://static.vecteezy.com/system/resources/thumbnails/001/984/036/small/isometric-book-illustrated-on-white-background-free-vector.jpg")
+    const [image, setImage] = useState("https://mobimg.b-cdn.net/v3/fetch/8b/8b0e79c4c83b8b6f57d5007b8e54181c.jpeg")
     const [stars, setStars] = useState(0)
+
+    const [imageValid, setImageValid] = useState(true);
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value)
@@ -29,6 +31,11 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
 
     const handleImageChange = (event) => {
         setImage(event.target.value)
+        setImageValid(true)
+    }
+
+    const handleImageError = (event) => {
+        setImageValid(false);
     }
 
     const handleStarsChange = (event) => {
@@ -36,6 +43,11 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     }
 
     const handleSubmit = (event) => {
+        event.preventDefault()
+        if (!imageValid) {
+            alert("Image source is invalid, please provide a valid image source.");
+            return;
+        }
         const currentDateTime = new Date();
         console.log(currentDateTime);
         const newReviewID = mediaItems.length === 0 ? 1 : mediaItems.reduce((prev, current) => (prev.id > current.id) ? prev.id : current.id) + 1;
@@ -52,7 +64,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
         setMediaItems(newReview)
         console.log(mediaItems)
         onClose()
-        event.preventDefault()
+       
     }
 
     return(open) ? (
@@ -91,7 +103,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                         </div>
                         <label>COVER</label>
                         <input type="text" id="image" name="author" placeholder="link to image" value={image} onChange={handleImageChange}/>
-                        <img src={image} alt="Media cover image"/>
+                        <img src={image} alt=" Media cover image" onError={handleImageError}/>
                         <br></br>
                         <label>STARS</label>
                         <Rate rating={stars} onRating={(rate) => setStars(rate)}/>

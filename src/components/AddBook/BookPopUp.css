@@ -21,6 +21,7 @@
     background-color: rgb(29, 29, 29);
     opacity: 1;
     border-radius: 25px;
+    overflow: auto;
 }
 
 .addbookpopup-inner {
