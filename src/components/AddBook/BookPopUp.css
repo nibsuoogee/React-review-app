@@ -86,7 +86,29 @@ input[type=submit]:hover {
     height: 6vh;
     display: flex;
   }
-  .container .btn-holder {
-    justify-content: flex-end;
-    display: flex;
-  }
+.container .btn-holder {
+justify-content: flex-end;
+display: flex;
+}
+
+#image-row {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.refill-btn {
+    background-color: transparent; 
+    border: none; 
+    color: gold; 
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+.refill-btn:hover {
+    color: #5b5b5be7;
+}
