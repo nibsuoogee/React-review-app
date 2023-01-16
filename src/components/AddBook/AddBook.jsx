@@ -1,7 +1,7 @@
 import React from 'react'
-import './BookPopUp.css'
+import './AddBook.css'
 import {useState} from "react"
-import Rate from '../StarRating/StarRating'
+import StarRating from '../StarRating/StarRating'
 
 const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     const [title, setTitle] = useState("")
@@ -79,13 +79,13 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                 <button className="close-btn" onClick={onClose}><i class="fa fa-close"></i></button>
                 <div className='review-box'>
                     <form onSubmit={handleSubmit}>
-                        <label for="title">TITLE </label>
+                        <h1 for="title">TITLE </h1>
                         <input type="text" id="name" name="title" placeholder="Name of the book" value={title} onChange={handleTitleChange}/>
 
-                        <label for="author">AUTHOR </label>
+                        <h1 for="author">AUTHOR </h1>
                         <input type="text" id="author" name="author" placeholder="Author" value={author} onChange={handleAuthorChange}/>
 
-                        <label for="genre">GENRE</label>
+                        <h1 for="genre">GENRE</h1>
                         <select id="genre" name="genre" value={genre} onChange={handleGenreChange}>
                             <option value="scifi">Sci-fi</option>
                             <option value="drama">Drama</option>
@@ -100,21 +100,21 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                             <option value="self-help">Self-help</option>
                             <option value="finance">Finance</option>
                         </select>
-                        <label>REVIEW</label>
+                        <h1>REVIEW</h1>
                         <div id="reviewtext-div">
                             <div id="reviewtext-holder">
                                 <textarea rows="10" cols="45" placeholder='Type a short review for the book' value={review} onChange={handleReviewChange}/>
                             </div>
                         </div>
-                        <label>COVER</label>
+                        <h1>COVER</h1>
                         <div className='container' id="image-row">
                             <input type="text" id="image" name="author" placeholder="link to image" value={image} onChange={handleImageChange}/>
                             <button type="button" className="refill-btn" onClick={handleSetDefaultImage}><i class="fa fa-undo"></i></button>
                         </div>  
-                        <img src={image} alt=" Media cover image" onError={handleImageError}/>´  
+                        <img src={image} alt=" Media cover image" onError={handleImageError}/>
                         <br></br>
-                        <label>STARS</label>
-                        <Rate rating={stars} onRating={(rate) => setStars(rate)}/>
+                        <h1>STARS</h1>
+                        <StarRating rating={stars} onRating={(StarRating) => setStars(StarRating)}/>
                         <div className='container'>
                             <div class="btn-holder">
                                 <input type="submit" value="Save" id="save-btn"/>
@@ -124,7 +124,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                 </div>
             </div>
         </div>
-    ) : null;
+    ) : "";
 }
 
 export default AddBook

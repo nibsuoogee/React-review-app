@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import './StarRating.css'
 
 // StarRating component credit to Prem Kumar @codegeous
-const Rate = ({ count, rating, color, onRating, onlyDisplay }) => {
+const StarRating = ({ count, rating, color, onRating, onlyDisplay }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
   const getColor = (index) => {
@@ -38,7 +38,7 @@ const Rate = ({ count, rating, color, onRating, onlyDisplay }) => {
   return <div>{starRating}</div>;
 };
 
-Rate.propTypes = {
+StarRating.propTypes = {
   count: PropTypes.number,
   rating: PropTypes.number,
   onChange: PropTypes.func,
@@ -48,7 +48,7 @@ Rate.propTypes = {
   },
 };
 
-Rate.defaultProps = {
+StarRating.defaultProps = {
   count: 5,
   rating: 0,
   color: {
@@ -58,4 +58,4 @@ Rate.defaultProps = {
   onlyDisplay: false,
 };
 
-export default Rate;
+export default StarRating;

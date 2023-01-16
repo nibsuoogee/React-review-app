@@ -11,6 +11,13 @@
     z-index: 100000;
 }
 
+h1{
+    color: gold;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
 .reviewpopup-inner {
     position: fixed;
     padding: 2rem;
@@ -46,7 +53,6 @@ label{
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-/* Style inputs */
 input[type=text], select {
     width: 70%;
     padding: 12px 20px;
@@ -57,10 +63,8 @@ input[type=text], select {
     box-sizing: border-box;
     display: flex;
     text-align: center;
-    
 }
 
-/* Style the submit button */
 input[type=submit] {
     width: 20%;
     background-color: #F5D10D;
@@ -72,10 +76,8 @@ input[type=submit] {
     cursor: pointer;
     font-weight: bold;
     font-size: 22px;
-    
 }
 
-/* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
     background-color: white;
 }
@@ -87,8 +89,8 @@ input[type=submit]:hover {
     display: flex;
   }
 .container .btn-holder {
-justify-content: flex-end;
-display: flex;
+    justify-content: flex-end;
+    display: flex;
 }
 
 #image-row {
@@ -111,4 +113,11 @@ display: flex;
 
 .refill-btn:hover {
     color: #5b5b5be7;
+}
+
+#save-btn {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
 }
