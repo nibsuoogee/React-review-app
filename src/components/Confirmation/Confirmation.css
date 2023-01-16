@@ -25,12 +25,16 @@
     opacity: 1;
     z-index: 10000 !important;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
 .confirmpopup-inner .close-btn {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 32px;
+    right: 32px;
 }
 
 .confirmpopup-inner #confirm-btn {
