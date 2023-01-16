@@ -34,6 +34,10 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
         setImageValid(true)
     }
 
+    const handleSetDefaultImage = () => {
+        setImage("https://mobimg.b-cdn.net/v3/fetch/8b/8b0e79c4c83b8b6f57d5007b8e54181c.jpeg")
+    }
+
     const handleImageError = (event) => {
         setImageValid(false);
     }
@@ -102,8 +106,11 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
                             </div>
                         </div>
                         <label>COVER</label>
-                        <input type="text" id="image" name="author" placeholder="link to image" value={image} onChange={handleImageChange}/>
-                        <img src={image} alt=" Media cover image" onError={handleImageError}/>
+                        <div className='container' id="image-row">
+                            <input type="text" id="image" name="author" placeholder="link to image" value={image} onChange={handleImageChange}/>
+                            <button type="button" className="refill-btn" onClick={handleSetDefaultImage}><i class="fa fa-undo"></i></button>
+                        </div>  
+                        <img src={image} alt=" Media cover image" onError={handleImageError}/>´  
                         <br></br>
                         <label>STARS</label>
                         <Rate rating={stars} onRating={(rate) => setStars(rate)}/>
