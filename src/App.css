@@ -41,8 +41,9 @@ body{
 
 #addbtndiv{
     margin-left: 30%;
-    height: 75px;
-    width: 75px;
+    margin-top: 0.5%;
+    height: 6vh;
+    width: 6vh;
     color: #F5D10D
 }
 
