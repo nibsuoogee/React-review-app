@@ -1,7 +1,7 @@
 import './App.css';
 import ReviewPopup from './components/ReviewPopup/ReviewPopup';
 import { useState, useEffect } from 'react';
-import AddBook from './components/AddBook/BookPopUp';
+import AddBook from './components/AddBook/AddBook';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -117,9 +117,7 @@ function App() {
       </div>
       <div className='popups'>
         <AddBook open={openBookPopup} onClose={() => setOpenBookPopup(false)} mediaItems={mediaItems} setMediaItems={handleNewBookReview}/>
-        <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook} handleRemoveReview={handleRemoveReview}>
-            <h3>Review Popup</h3>
-            </ReviewPopup>
+        <ReviewPopup triggerBook={currentBook} setTrigger={HandleSetCurrentBook} handleRemoveReview={handleRemoveReview}/>
           {showInfo && (
             <div className="animated-info">
               <div class="data_type_text">{ infoMessage }</div>

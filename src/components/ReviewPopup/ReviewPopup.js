@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import './ReviewPopup.css'
-import Rate from '../StarRating/StarRating'
+import StarRating from '../StarRating/StarRating'
 import Confirmation from '../Confirmation/Confirmation.js'
 
 function ReviewPopup(props) {
@@ -39,7 +39,7 @@ function ReviewPopup(props) {
                     <div class="image_and_stars">
                         <img src={media.image} alt="Media cover image"/>
                         <div className="star-rating">
-                            <Rate rating={media.stars} onlyDisplay={true}/>
+                            <StarRating rating={media.stars} onlyDisplay={true}/>
                         </div>
                         <div>
                             {displayDate(media.time)}
@@ -48,19 +48,19 @@ function ReviewPopup(props) {
                     </div>
                     <div className='data'>
                         <div id="titledata" class="datadiv">
-                            <h3>Title</h3>
+                            <h1>Title</h1>
                             <h2 className='titletext'>{media.title}</h2>
                         </div>
                         <div id="authordata" class="datadiv">
-                            <h3>Author</h3>
+                            <h1>Author</h1>
                             <h2 className='titletext'>{media.author}</h2>
                         </div>
                         <div id="genredata" class="datadiv">
-                            <h3>Genres</h3>
+                            <h1>Genres</h1>
                             <h2 className='titletext'>{media.genres}</h2>
                         </div>
                         <div id="reviewdata" class="datadiv">
-                            <h3>Review</h3>
+                            <h1>Review</h1>
                             <p className='titletext' id="reviewtext">{media.review}</p>
                         </div>
                     </div>
