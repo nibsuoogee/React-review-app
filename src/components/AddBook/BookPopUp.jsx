@@ -39,6 +39,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
     }
 
     const handleImageError = (event) => {
+        event.target.src = "https://developers.google.com/static/maps/documentation/streetview/images/error-image-generic.png";
         setImageValid(false);
     }
 
