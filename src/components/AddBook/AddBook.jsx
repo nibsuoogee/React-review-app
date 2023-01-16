@@ -36,6 +36,7 @@ const AddBook = ({open, onClose, mediaItems, setMediaItems}) => {
 
     const handleSetDefaultImage = () => {
         setImage("https://mobimg.b-cdn.net/v3/fetch/8b/8b0e79c4c83b8b6f57d5007b8e54181c.jpeg")
+        setImageValid(true)
     }
 
     const handleImageError = (event) => {
