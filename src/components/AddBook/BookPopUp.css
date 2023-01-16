@@ -12,7 +12,7 @@
 }
 
 .reviewpopup-inner {
-    position: relative;
+    position: fixed;
     padding: 2rem;
     width: 50rem;
     max-width: 500px;

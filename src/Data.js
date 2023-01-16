@@ -89,4 +89,13 @@ export const books = [
       image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517709298l/36485213._SY475_.jpg",
       stars: 5
     },
+  {
+      id: 11,
+      title: "Hitchhikers guide to the galaxy",
+      author: "Douglas Adams",
+      genres: ["Scfi-fi"],
+      review: "Goofy ahh sci-fi book💀",
+      image: "https://devontrevarrowflaherty.files.wordpress.com/2014/09/hitchhikers-guide-to-the-galaxy.png",
+      stars: 5
+    },
 ]
