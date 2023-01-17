@@ -14,7 +14,7 @@
 
 # Add new entries
 
-![image](https://user-images.githubusercontent.com/37696410/212696596-7de8d902-e934-4e67-8afb-ec5e88e682b8.png)
+![image](https://user-images.githubusercontent.com/37696410/212833207-8b045621-9cb1-447b-8382-2bdd7a0d62d8.png)
 
 # View current entries
 
@@ -22,7 +22,7 @@
 
 # Remove entries
 
-![image](https://user-images.githubusercontent.com/37696410/212696995-f3572c70-4f19-443b-8e87-e54d261517d7.png)
+![image](https://user-images.githubusercontent.com/37696410/212833534-f8c70061-47dd-4c00-a19c-4f2a44bc7e91.png)
 
 # Fun interactive animation!
 
